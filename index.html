@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>My Website</title>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <img src="https://sokrates.id/wp-content/uploads/2021/04/logo-RP_trans-768x1031.png" class="logo" width="40" height="50"/>
+            <ul>
+                <li class="home"><a href="../Assignment/index.html" class="active">Home</a></li>
+                <li class="search"><a href="../Assignment/profile.html">Our Profile</a></li>
+                <li class="logout"><a href="../Assignment/achievement.html">Achievement</a></li>
+                <li class="logout"><a href="../Assignment/message.html">Message Us</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <hr color="black">
+    </header>
+    <main>
+        <section> 
+            <p style="font-size: 30px" class="main-margin">Hi <span id="name"></span>, Welcome To Regina Pacis Bogor School's Website</p>
+            <script>
+                var name = prompt("Masukkan Nama Kamu");
+                var element = document.getElementById("name").innerText = name;
+            </script>
+            <p class="main-margin"> Selamat Datang Kami Ucapkan</p>
+        </section>
+        <div>
+            <img src="https://reginapacis.sch.id/wp-content/uploads/2018/07/SMA-profil-gedung-1.jpg" alt="rp" width="100%" height="auto">
+        </div>
+        <hr>
+        <div class="main-margin">
+            <h2>Our Facilities</h2>
+        </div>
+        <section class="facilities">
+            <div>
+                <img src="https://i0.wp.com/reginapacis.sch.id/wp-content/uploads/2020/02/Perpustakaan-SMPSMA-23-scaled.jpg?fit=1020%2C496&ssl=1" class="img-circle">
+                <p>Library</p>
+            </div>
+            <div>
+                <img src="https://fastly.4sqi.net/img/general/600x600/2705481_cDfi9wiHoRetg6G6H9oPZhcrNCyAyhD3AUpxC1zAwKM.jpg" class="img-circle">
+                <p>Sports Field</p>
+            </div>
+            <div>
+                <img src="https://i0.wp.com/reginapacis.sch.id/wp-content/uploads/2020/02/SMA-Ruang-Audiovisual-8-scaled.jpg?fit=1020%2C765&ssl=1" class="img-circle">
+                <p>Smart Classroom</p>
+            </div>
+            <div>
+                <img src="https://i1.wp.com/inreview.id/wp-content/uploads/2019/06/review-sma-regina-pacis-bogor-1.jpg" class="img-circle">
+                <p>Chatolic Chapel</p>
+            </div>
+        </section>
+        <hr>
+        <div class="main-margin">
+        <h2 style="color: white;">Message Us</h2>
+        </div>
+        <div class="content">
+            <div>
+                <form name="message-form" onsubmit="return validateForm()">
+                    <nav class="form">
+                        <div class="head">
+                            <div class="margin-form">Nama</div>
+                            <div class="margin-form">Tanggal Lahir</div>
+                            <div class="margin-form">Jenis Kelamin</div>
+                            <div class="margin-form">Pesan</div>
+                        </div>
+                        <div class="titik">
+                           <div class="margin-form">:</div>
+                           <div class="margin-form">:</div>
+                           <div class="margin-form">:</div>
+                           <div class="margin-form">:</div>
+                        </div>
+                        <div class="isi">
+                            <input type="text" placeholder="Nama" class="margin-form" name="full-name" required>
+                            <input type="date" class="margin-form" name="birth-date" required>
+                            <div class="margin-form">
+                                <input type="radio" name="gender" value="Laki-laki" required>Laki-laki
+                                <input type="radio" name="gender" value="Perempuan" required>Perempuan
+                            </div>
+                            <div>
+                                <textarea placeholder="Pesan" class="margin-form" rows="4" cols="30" name="messages"></textarea>
+                            </div>
+                        </div>
+                    </nav>
+                    <input class="tombol" type="submit" value="Submit">
+                </form>
+            </div>
+
+            <div>
+                <div class="output-content">
+                    <p class="form-output">Current Date:<span id="sender-time"></span></p>
+                    <p class="form-output">Nama: <span id="sender-full-name"></span></p>
+                    <p class="form-output">Tanggal Lahir: <span id="sender-birth-date"></span></p>
+                    <p class="form-output">Jenis Kelamin: <span id="sender-gender"></span></p>
+                    <p class="form-output">Pesan: <span id="sender-messages"></span></p>
+                </div>
+               <script>
+                    function validateForm() {
+                        var today = new Date();
+                        var name = document.forms["message-form"]["full-name"].value;
+                        var date = document.forms["message-form"]["birth-date"].value;
+                        var gender = document.forms["message-form"]["gender"].value;
+                        var messages = document.forms["message-form"]["messages"].value;
+                        
+                        if (name == "" ||  date == "" || gender == "" || messages == "") {
+                        alert("Tidak boleh kosong")
+                        return false;
+                        }
+
+                        document.getElementById('sender-time').innerText = today;
+                        document.getElementById('sender-full-name').innerText = name;
+                        document.getElementById('sender-birth-date').innerText = date;
+                        document.getElementById('sender-gender').innerText = gender;
+                        document.getElementById('sender-messages').innerText = messages;
+                        return false;
+                    }
+               </script> 
+            </div>
+        </div>
+        <hr>
+    </main>
+
+    <footer>
+        <p>Regina Pacis 2023</p>
+    </footer>
+</body>
+
+</html>
