@@ -52,10 +52,6 @@
     background-color: black;
 }
 
-@media screen and (max-width: 576px) {
-    
-}
-
 .main-margin {
     color: white;
     margin-left: 73px;
@@ -139,7 +135,6 @@
     display:flex;
     color: white;
     border: 1px solid white;
-    width: 400px;
     height: 250px;
     margin-bottom: 20px;
 }
@@ -150,4 +145,8 @@ footer > p {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    
 }
