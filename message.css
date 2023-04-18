@@ -51,6 +51,53 @@
     background-color: black;
 }
 
+.content{
+    flex-direction: row; 
+    display:flex;
+    color: white;
+    margin-bottom: auto;
+}
+
+.content > div {
+    display: flex;
+    flex: 2; align-content: center; justify-content: center;
+}
+
+.form{
+    flex-direction: row; 
+    display:flex;
+    margin: 10px;
+}
+.head{
+    flex-direction: column; 
+    display:flex;
+    width: 120px;
+}
+.margin-form {
+    margin: 7px;
+    color: white;
+}
+
+.titik{
+    flex-direction: column;
+    display: flex;
+}
+
+.tombol {
+    width: 300px;
+    height: 25px;
+    color: white;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.isi {
+    flex-direction: column; 
+    display:flex;
+    color: white;
+}
+
+
 footer > p {
     text-align: end;
     color: white;
