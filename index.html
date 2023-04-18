@@ -13,17 +13,11 @@
         <nav class="container">
             <img src="https://sokrates.id/wp-content/uploads/2021/04/logo-RP_trans-768x1031.png" class="logo" width="40" height="50"/>
             <ul>
-                <li class="home"><a href="../Assignment/index.html" class="active">Home</a></li>
-                <li class="search"><a href="../Assignment/profile.html">Our Profile</a></li>
-                <li class="logout"><a href="../Assignment/achievement.html">Achievement</a></li>
-                <li class="logout"><a href="../Assignment/message.html">Message Us</a></li>
+                <li class="home"><a href="index.html" class="active">Home</a></li>
+                <li class="search"><a href="profile.html">Our Profile</a></li>
+                <li class="logout"><a href="achievement.html">Achievement</a></li>
+                <li class="logout"><a href="message.html">Message Us</a></li>
             </ul>
-            <div class="menu-toggle">
-                <input type="checkbox">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
         <hr color="black">
     </header>
@@ -36,29 +30,49 @@
             </script>
             <p class="main-margin"> Selamat Datang Kami Ucapkan</p>
         </section>
-        <div>
-            <img src="https://reginapacis.sch.id/wp-content/uploads/2018/07/SMA-profil-gedung-1.jpg" alt="rp" width="100%" height="auto">
+        <div class="slider">
+            <img src="https://reginapacis.sch.id/wp-content/uploads/2018/07/SMA-profil-gedung-1.jpg" alt="rp" width="100%" height="auto" class="img-slideshow"/>
+            <img src="https://reginapacis.sch.id/wp-content/uploads/2020/11/Gedung-Silaban-Sekolah-Regina-Pacis-Bogor-2.png" alt="rp" width="100%" height="auto" class="img-slideshow"/>
+            <img src="https://sentul.city/wp-content/uploads/2020/05/rp-3.png" alt="rp" width="100%" height="auto" class="img-slideshow"/>
+            <button onclick="plusDivs(-1)" style="color: white; margin-bottom: 20px; width: 200px;">Previous
+            </button>
+            <button onclick="plusDivs(1)" style="color: white; margin-bottom: 20px; width: 200px;">Next
+            </button>
         </div>
+        <script>
+            function showDivs(n) {
+                var i;
+                var imgList = document.getElementsByClassName('img-slideshow');
+                if (n > imgList.length) slideIndex = 1;
+                else if (n < 1) slideIndex = imgList.length;
+
+                for (i= 0; i < imgList.length; i++) {
+                    imgList[i].style.display = 'none';
+                }
+                
+                imgList[slideIndex - 1].style.display = 'block';
+            }
+        </script>
         <hr>
         <div class="main-margin">
             <h2>Our Facilities</h2>
         </div>
         <section class="facilities">
-            <div>
+            <div class="display-flex">
                 <img src="https://i0.wp.com/reginapacis.sch.id/wp-content/uploads/2020/02/Perpustakaan-SMPSMA-23-scaled.jpg?fit=1020%2C496&ssl=1" class="img-circle">
-                <p>Library</p>
+                <p style="margin-top: 8px;">Library</p>
             </div>
-            <div>
+            <div class="display-flex">
                 <img src="https://fastly.4sqi.net/img/general/600x600/2705481_cDfi9wiHoRetg6G6H9oPZhcrNCyAyhD3AUpxC1zAwKM.jpg" class="img-circle">
-                <p>Sports Field</p>
+                <p style="margin-top: 8px;">Sports Field</p>
             </div>
-            <div>
+            <div class="display-flex">
                 <img src="https://i0.wp.com/reginapacis.sch.id/wp-content/uploads/2020/02/SMA-Ruang-Audiovisual-8-scaled.jpg?fit=1020%2C765&ssl=1" class="img-circle">
-                <p>Smart Classroom</p>
+                <p style="margin-top: 8px;">Smart Classroom</p>
             </div>
-            <div>
+            <div class="display-flex">
                 <img src="https://i1.wp.com/inreview.id/wp-content/uploads/2019/06/review-sma-regina-pacis-bogor-1.jpg" class="img-circle">
-                <p>Chatolic Chapel</p>
+                <p style="margin-top: 8px;">Chatolic Chapel</p>
             </div>
         </section>
         <hr>

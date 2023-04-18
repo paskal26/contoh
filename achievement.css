@@ -42,7 +42,8 @@
 .container ul li a:hover{
     color: yellow;
     background-color: black;
-    transition: all .4s ease-in-out
+    transition: all .4s ease-in-out;
+    transform: scale(1.1);
 }
 
 .container ul li a.active{

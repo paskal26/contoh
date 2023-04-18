@@ -22,13 +22,6 @@
     margin-left: 20px;
 }
 
-.main-margin {
-    color: white;
-    margin-left: 73px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
 .container ul {
     display: flex;
     list-style: none;
@@ -50,7 +43,8 @@
 .container ul li a:hover{
     color: yellow;
     background-color: black;
-    transition: all .4s ease-in-out
+    transition: all .4s ease-in-out;
+    transform: scale(1.1);
 }
 
 .container ul li a.active{
@@ -58,58 +52,15 @@
     background-color: black;
 }
 
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    height: 20px;
-    justify-content: space-between;
-}
-
-.menu-toggle input {
-    position: absolute;
-    width: 40px;
-    height: 28px;
-    opacity: 0;
-    z-index: 2;
-}
-
-.menu-toggle span {
-    margin-right: 20px;
-    display: block;
-    width: 28px;
-    height: 3px;
-    background-color: aliceblue;
-    border-radius: 3px;
-    transition: all 0.5s;
-}
-
-.menu-toggle span:nth-child(2) {
-    transform-origin: 0 0;
-}
-
-.menu-toggle span:last-child {
-    transform-origin: 0 100%;
-}
-
-.menu-toggle input:checked ~ span:nth-child(2) {
-    transform: rotate(45deg); translate: -1px -1px;
-}
-
-.menu-toggle input:checked ~ span:last-child {
-    transform: rotate(-45deg); translate: -1px 0;
-}
-
-.menu-toggle input:checked ~ span:nth-child(3) {
-    transform: scale(0)
-}
-
 @media screen and (max-width: 576px) {
-    .menu-toggle {
-        display: flex;
-    }
-    nav ul li {
-        display: none;
-    }
+    
+}
+
+.main-margin {
+    color: white;
+    margin-left: 73px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .facilities {
@@ -126,6 +77,7 @@
     border-radius: 50%;
     width: 200px;
     height: 200px;
+    display: flex;
 }
 
 .line_spacing p{
