@@ -23,34 +23,38 @@
     </header>
     <hr>
     <main>
-        <form name="message-form" class="content">
-            <nav class="form">
-                <div class="head">
-                    <div class="margin-form">Nama</div>
-                    <div class="margin-form">Tanggal Lahir</div>
-                    <div class="margin-form">Jenis Kelamin</div>
-                    <div class="margin-form">Pesan</div>
-                </div>
-                <div class="titik">
-                   <div class="margin-form">:</div>
-                   <div class="margin-form">:</div>
-                   <div class="margin-form">:</div>
-                   <div class="margin-form">:</div>
-                </div>
-                <div class="isi">
-                    <input type="text" placeholder="Nama" class="margin-form" name="full-name" required>
-                    <input type="date" class="margin-form" name="birth-date" required>
-                    <div class="margin-form">
-                        <input type="radio" name="gender" value="Laki-laki" required>Laki-laki
-                        <input type="radio" name="gender" value="Perempuan" required>Perempuan
-                    </div>
-                    <div>
-                        <textarea placeholder="Pesan" class="margin-form" rows="4" cols="30" name="messages"></textarea>
-                    </div>
-                </div>
-            </nav>
-            <input class="tombol" type="submit" value="Submit">
-        </form>
+        <div class="content">
+            <div>
+                <form name="message-form" onsubmit="return validateForm()">
+                    <nav class="form">
+                        <div class="head">
+                            <div class="margin-form">Nama</div>
+                            <div class="margin-form">Tanggal Lahir</div>
+                            <div class="margin-form">Jenis Kelamin</div>
+                            <div class="margin-form">Pesan</div>
+                        </div>
+                        <div class="titik">
+                           <div class="margin-form">:</div>
+                           <div class="margin-form">:</div>
+                           <div class="margin-form">:</div>
+                           <div class="margin-form">:</div>
+                        </div>
+                        <div class="isi">
+                            <input type="text" placeholder="Nama" class="margin-form" name="full-name" required>
+                            <input type="date" class="margin-form" name="birth-date" required>
+                            <div class="margin-form">
+                                <input type="radio" name="gender" value="Laki-laki" required>Laki-laki
+                                <input type="radio" name="gender" value="Perempuan" required>Perempuan
+                            </div>
+                            <div>
+                                <textarea placeholder="Pesan" class="margin-form" rows="4" cols="30" name="messages"></textarea>
+                            </div>
+                        </div>
+                    </nav>
+                    <input class="tombol" type="submit" value="Submit">
+                </form>
+            </div>
+
     </main>
 </body>
 
