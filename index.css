@@ -61,7 +61,7 @@
 
 .facilities {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     margin-left: 73px;
     color: white;
     gap: 50px;
@@ -81,7 +81,7 @@
 }
 
 .content{
-    flex-direction: row; 
+    flex-wrap: wrap;
     display:flex;
     color: white;
     margin-bottom: auto;
